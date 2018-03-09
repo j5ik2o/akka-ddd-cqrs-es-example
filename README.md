@@ -3,7 +3,7 @@
 ## Features
 
 - DDD based design
-- Implements using Akka(-acotor, -stream, -cluster-sharding, -persistence, -persistence-query, ...)
+- Implements using Akka(-acotor, -stream, -cluster-sharding, -persistence, -persistence-query, -http, ...)
 - Scala 2.12.4
 - REST API Application
 
@@ -13,15 +13,33 @@
 
 ## Layered structure
 
+In this project, layered structure is based on 'Clean architecture'.
+
 ### Domain layer
+
+- Domain objects is represented by case class.
+- Domain types
+    - BankAccountId
+    - BankAccount
+    - BankAccountEventId
+    - BankAccountEvent
 
 ### Use case layer
 
+- Command use case is BankAccountAggregateUseCase
+- Query use case is BankAccountReadModelUseCase
+
 ### Interface layer
 
-#### API
+#### Controller
+
+- BankAccountController
 
 #### Persistence
+
+- Slick3 Daos
+    - BankAccountDao
+    - BankAccountEventDao
 
 
 ## How to run
