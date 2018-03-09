@@ -31,6 +31,11 @@ In this project, layered structure is based on 'Clean architecture'.
 
 ### Interface layer
 
+#### Aggregate
+
+- BankAccountAggregate(PersistenActor)
+- ShardedBankAccountAggregates(proxy to ShardRegion)
+
 #### Controller
 
 - BankAccountController
