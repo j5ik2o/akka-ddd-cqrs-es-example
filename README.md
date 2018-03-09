@@ -1,5 +1,29 @@
 # Bank API CQRS Event Sourcing System on Akka-Cluster (Concept Model)
 
+## Features
+
+- DDD based design
+- Implements using Akka(-acotor, -stream, -cluster-sharding, -persistence, -persistence-query, ...)
+- Scala 2.12.4
+- REST API Application
+
+## Target domain
+
+- Bank Account to deposit/withdraw
+
+## Layered structure
+
+### Domain layer
+
+### Use case layer
+
+### Interface layer
+
+#### API
+
+#### Persistence
+
+
 ## How to run
 
 Terminal #1
