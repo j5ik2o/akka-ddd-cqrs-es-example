@@ -33,7 +33,7 @@ In this project, layered structure is based on 'Clean architecture'.
 
 #### Aggregate
 
-- BankAccountAggregate(PersistenActor)
+- BankAccountAggregate(PersistentActor)
 - ShardedBankAccountAggregates(proxy to ShardRegion)
 
 #### Controller
