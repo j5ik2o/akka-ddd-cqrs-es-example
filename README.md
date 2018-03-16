@@ -11,7 +11,7 @@
 
 - Bank Account to deposit/withdraw
 
-## Use case
+## Target Use cases
 
 - Deposit a money to a Bank Account
 - Withdraw a money from a Bank Account
@@ -29,11 +29,11 @@ In this project, layered structure is based on 'Clean architecture'.
     - BankAccount
     - BankAccountEventId
     - BankAccountEvent
-        - BankAccountOpened
-        - BankAccountUpdated
-        - BankAccountDeposited
-        - BankAccountWithdrawn
-        - BankAccountClosed
+        - BankAccountOpened is the account opening event
+        - BankAccountUpdated is the account information updating event
+        - BankAccountDeposited is the deposit event
+        - BankAccountWithdrawn is the withdarw event
+        - BankAccountClosed is the account closed event
 
 ### Use case layer
 
@@ -54,9 +54,13 @@ In this project, layered structure is based on 'Clean architecture'.
 
 #### Persistence
 
-- Slick3 Daos
-    - BankAccountDao
-    - BankAccountEventDao
+- Slick3
+　　　　　　　　- Daos
+        - BankAccountDao
+        - BankAccountEventDao
+    - Records
+        - BankAccountRecord
+        - BankAccountEventRecord
 
 
 ## How to run
