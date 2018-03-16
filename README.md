@@ -51,7 +51,7 @@ In this project, the layered structure is based on ['Clean Architecture'](https:
 #### Controller
 
 - [BankAccountController](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/controller/BankAccountController.scala)
-- [Routes](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/controller/Routes.scala
+- [Routes](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/controller/Routes.scala)
 - [BankAccountValidateDirectives](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/controller/BankAccountValidateDirectives.scala)
 
 #### Persistence
