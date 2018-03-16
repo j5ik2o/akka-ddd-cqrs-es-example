@@ -25,10 +25,10 @@ In this project, layered structure is based on 'Clean architecture'.
 
 - Domain objects is represented by case class.
 - Domain types
-    - BankAccountId
-    - BankAccount
-    - BankAccountEventId
-    - BankAccountEvent
+    - [BankAccountId](domain/src/main/scala/com/github/j5ik2o/bank/domain/model/BankAccountId.scala)
+    - [BankAccount](domain/src/main/scala/com/github/j5ik2o/bank/domain/model/BankAccount.scala)
+    - [BankAccountEventId](domain/src/main/scala/com/github/j5ik2o/bank/domain/model/BankAccountEventId.scala)
+    - [BankAccountEvent](domain/src/main/scala/com/github/j5ik2o/bank/domain/model/BankAccountEvent.scala)
         - BankAccountOpened is the account opening event
         - BankAccountUpdated is the account information updating event
         - BankAccountDeposited is the deposit event
