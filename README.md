@@ -13,9 +13,9 @@
 
 ## Use case
 
-- Deposit monies to a Bank Account
-- Withdraw monies from a Bank Account
-- Refer deposits and withdraws in a Bank Account
+- Deposit a money to a Bank Account
+- Withdraw a money from a Bank Account
+- Refer to deposits and withdraws in a Bank Account
 
 ## Layered structure
 
@@ -40,6 +40,7 @@ In this project, layered structure is based on 'Clean architecture'.
 #### Aggregate
 
 - BankAccountAggregate(PersistentActor)
+- ShardedBankAccountAggregate(BankAccountAggregate for cluster-sharding)
 - ShardedBankAccountAggregates(proxy to ShardRegion)
 
 #### Controller
