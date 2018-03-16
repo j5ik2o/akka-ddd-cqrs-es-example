@@ -55,7 +55,7 @@ In this project, layered structure is based on 'Clean architecture'.
 #### Persistence
 
 - Slick3
-　　　　　　　　- Daos
+    - Daos
         - BankAccountDao
         - BankAccountEventDao
     - Records
