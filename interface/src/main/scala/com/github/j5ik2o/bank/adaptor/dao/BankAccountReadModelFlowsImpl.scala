@@ -26,6 +26,21 @@ class BankAccountReadModelFlowsImpl(val profile: JdbcProfile, val db: JdbcProfil
   private val bankAccountEventIdGenerator: IdGenerator[BankAccountEventId] =
     IdGenerator.ofBankAccountEventId(profile, db)
 
+  override def resolveBankAccountEventByIdFlow(
+      implicit ec: ExecutionContext
+  ): Flow[ResolveBankAccountEventsRequest, ResolveBankAccountEventsResponse, NotUsed] =
+    Flow[ResolveBankAccountEventsRequest]
+      .mapAsync(1) { _request =>
+        db.run(BankAccountEventDao.filter(_.bankAccountId === _request.bankAccountId.value).result).map((_request, _))
+      }
+      .map {
+        case (_request, result) =>
+          val values = result.map { v =>
+            BankAccountEventBody(v.`type`, v.amount, v.currencyCode, v.createdAt)
+          }
+          ResolveBankAccountEventsSucceeded(_request.bankAccountId, values)
+      }
+
   def resolveLastSeqNrSource(implicit ec: ExecutionContext): Source[Long, NotUsed] =
     Source.single(1).mapAsync(1) { _ =>
       db.run(BankAccountDao.map(_.sequenceNr).max.result)
@@ -123,18 +138,4 @@ class BankAccountReadModelFlowsImpl(val profile: JdbcProfile, val db: JdbcProfil
         )
     }
 
-  override def resolveBankAccountEventByIdFlow(
-      implicit ec: ExecutionContext
-  ): Flow[ResolveBankAccountEventsRequest, ResolveBankAccountEventsResponse, NotUsed] =
-    Flow[ResolveBankAccountEventsRequest]
-      .mapAsync(1) { _request =>
-        db.run(BankAccountEventDao.filter(_.bankAccountId === _request.bankAccountId.value).result).map((_request, _))
-      }
-      .map {
-        case (_request, result) =>
-          val values = result.map { v =>
-            BankAccountEventBody(v.`type`, v.amount, v.currencyCode, v.createdAt)
-          }
-          ResolveBankAccountEventsSucceeded(_request.bankAccountId, values)
-      }
 }
