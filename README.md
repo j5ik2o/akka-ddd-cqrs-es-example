@@ -62,8 +62,13 @@ In this project, layered structure is based on 'Clean architecture'.
         - BankAccountRecord
         - BankAccountEventRecord
 
+## How to run unit tests
 
-## How to run
+```sh
+$ sbt clean test
+```
+
+## How to run E2E tests
 
 Terminal #1
 
