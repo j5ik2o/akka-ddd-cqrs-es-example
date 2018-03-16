@@ -45,7 +45,7 @@ In this project, layered structure is based on 'Clean architecture'.
 #### Aggregate
 
 - [BankAccountAggregate](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/aggregate/BankAccountAggregate.scala)(PersistentActor)
-- [ShardedBankAccountAggregate](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/aggregate/ShardedBankAccountAggregate.scala)(BankAccountAggregate for cluster-sharding)
+- [ShardedBankAccountAggregate](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/aggregate/ShardedBankAccountAggregate.scala)(Extended BankAccountAggregate for cluster-sharding)
 - [ShardedBankAccountAggregates](interface/src/main/scala/com/github/j5ik2o/bank/adaptor/aggregate/ShardedBankAccountAggregates.scala)(proxy to ShardRegion)
 
 #### Controller
