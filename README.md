@@ -13,8 +13,8 @@
 
 ## Target Use cases
 
-- Deposit a money to a Bank Account
-- Withdraw a money from a Bank Account
+- Deposit money to a Bank Account
+- Withdraw money from a Bank Account
 - Refer to deposits and withdraws in a Bank Account
 
 ## Layered structure
