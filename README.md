@@ -19,7 +19,7 @@
 
 ## Layered structure
 
-In this project, layered structure is based on 'Clean architecture'.
+In this project, the layered structure is based on ['Clean Architecture'](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html).
 
 ### Domain layer
 
@@ -97,6 +97,7 @@ $ sbt 'read-model-updater/run'
 ## How to test
 
 ```sh
+# open a bank account
 $ curl -X POST \
   http://localhost:$PORT/bank-accounts \
   -H 'cache-control: no-cache' \
@@ -104,6 +105,7 @@ $ curl -X POST \
   -d '{ "name": "test-1" }'
 {"id":"XEe","errorMessage":null}%
 
+# update the bank account
 $ curl -X PUT \
   http://localhost:8080/bank-accounts/XEe \
   -H 'cache-control: no-cache' \
@@ -113,6 +115,7 @@ $ curl -X PUT \
 }'
 {"id":"XEe","errorMessage":null}%
 
+# deposit to the bank account
 $ curl -X PUT \
   http://localhost:8080/bank-accounts/XEe/events \
   -H 'cache-control: no-cache' \
@@ -124,6 +127,7 @@ $ curl -X PUT \
 }'
 {"id":"XEe","errorMessage":null}%
 
+# withdraw from the bank account
 $ curl -X PUT \
   http://localhost:8080/bank-accounts/XEe/events \
   -H 'cache-control: no-cache' \
@@ -135,6 +139,7 @@ $ curl -X PUT \
 }'
 {"id":"XEe","errorMessage":null}%
 
+# refer to events(deposits or withdraws) in the bank account
 $ curl -X GET \
   http://localhost:8080/bank-accounts/XEe \
   -H 'cache-control: no-cache' \
@@ -152,6 +157,7 @@ $ curl -X GET \
     "errorMessage": null
 }
 
+# close the bank account
 $ curl -X DELETE \
   http://localhost:8080/bank-accounts/XEe \
   -H 'cache-control: no-cache' \
