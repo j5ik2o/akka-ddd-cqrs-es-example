@@ -29,6 +29,11 @@ In this project, layered structure is based on 'Clean architecture'.
     - BankAccount
     - BankAccountEventId
     - BankAccountEvent
+        - BankAccountOpened
+        - BankAccountUpdated
+        - BankAccountDeposited
+        - BankAccountWithdrawn
+        - BankAccountClosed
 
 ### Use case layer
 
