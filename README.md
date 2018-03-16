@@ -37,8 +37,8 @@ In this project, layered structure is based on 'Clean architecture'.
 
 ### Use case layer
 
-- Command use case is BankAccountAggregateUseCase
-- Query use case is BankAccountReadModelUseCase
+- Command use case is [BankAccountAggregateUseCase](use-case/src/main/scala/com/github/j5ik2o/bank/useCase/BankAccountAggregateUseCase.scala)
+- Query use case is [BankAccountReadModelUseCase](use-case/src/main/scala/com/github/j5ik2o/bank/useCase/BankAccountReadModelUseCase.scala)
 
 ### Interface layer
 
