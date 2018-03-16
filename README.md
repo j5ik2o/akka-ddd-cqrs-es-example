@@ -3,7 +3,7 @@
 ## Features
 
 - DDD based design
-- Implements using Akka(-acotor, -stream, -cluster-sharding, -persistence, -persistence-query, -http, ...)
+- Implements using Akka(-actor, -stream, -cluster-sharding, -persistence, -persistence-query, -http, ...)
 - Scala 2.12.4
 - REST API Application
 
