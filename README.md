@@ -1,5 +1,7 @@
 # Bank API CQRS Event Sourcing System on Akka-Cluster (Concept Model)
 
+**!!!Notice!!!: This project is now considered outdated as it is based on the old Akka (untyped) API. For a more up-to-date example using the new Akka Typed API, please refer to [j5ik2o/akka-cqrs-es-example-typed](https://github.com/j5ik2o/akka-cqrs-es-example-typed). We strongly recommend checking out the updated version for a better understanding and implementation of the CQRS/ES pattern.**
+
 ## Features
 
 - DDD, CQRS + Event Sourcing based design
